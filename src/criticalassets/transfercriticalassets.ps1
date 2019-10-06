@@ -11,7 +11,7 @@ Get-ChildItem -Path $strCriticalAssetTransferLocation
 $numberofassets = (Get-ChildItem $strCriticalAssetTransferLocation -Recurse | Measure-Object).Count
 Write-Output "Number of assets found: " $numberofassets
 Write-Host "##vso[task.setvariable variable=bv_numberofassets]"$numberofassets
-$numberofassets = (Get-ChildItem "D:\a\1\s\demoangularapp" -Recurse | Measure-Object).Count
+$numberofassets = (Get-ChildItem "D:\a\1\s" -Recurse | Measure-Object).Count
 Write-Host "##vso[task.setvariable variable=ov_numberofassets;isOutput=true]"$numberofassets
 
 
